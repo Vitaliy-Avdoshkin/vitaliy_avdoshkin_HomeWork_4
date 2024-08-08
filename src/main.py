@@ -15,9 +15,12 @@ class Product:
 
 
 class Category:
+    name: str
+    description: str
+    products: list[Any]
     category_count = 0
     product_count = 0
-    products: list[Any]
+
 
     def __init__(self, name, description, products):
         self.name = name
