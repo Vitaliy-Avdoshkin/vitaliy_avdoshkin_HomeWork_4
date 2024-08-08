@@ -42,32 +42,6 @@ poetry add --group lint mypy
 ```
 [flake8]
 max-line-length = 119
-exclude = .git, __pycache__
-```
-
-Файл pyproject.toml
-
-black, isort, mypy
-```
-[tool.black]
-line_length = 119
-exclude = '''
-/(
-  | \.git
-)/
-'''
-
-[tool.isort]
-line_length = 119
-
-[tool.mypy]
-disallow_untyped_defs = true
-warn_return_any = true
-exclude = '''
-/(
-  | \.venv
-)/
-'''
 ```
 
 5. Установите библиотеку pandas, для работы с табличными данными.
@@ -120,3 +94,4 @@ capsys
 # Модули
 
 ## Модуль Main
+Модуль содержит два класса: Product и Category
