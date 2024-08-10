@@ -48,10 +48,11 @@ def category1_counter():
 @pytest.fixture()
 def category2():
     product4 = 4
+    product5 = 5
     return Category(
         "Телевизоры",
         "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
-        [product4],
+        [product4, product5],
     )
 
 

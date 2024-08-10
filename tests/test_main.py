@@ -26,11 +26,11 @@ def test_main_category(category1, category2):
     )
     assert category1.products == [1, 2, 3]
     assert Category.category_count == 2
-    assert Category.product_count == 4
+    assert Category.product_count == 5
 
     assert category2.name == "Телевизоры"
     assert (
         category2.description
         == "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником"
     )
-    assert category2.products == [4]
+    assert category2.products == [4, 5]
