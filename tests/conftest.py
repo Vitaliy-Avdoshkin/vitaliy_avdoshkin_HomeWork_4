@@ -1,6 +1,6 @@
 import pytest
 
-from src.main import Product, Category
+from src.main import Category, Product
 
 
 @pytest.fixture()
@@ -33,6 +33,19 @@ def category1():
 
 
 @pytest.fixture()
+def category1_counter():
+    product1 = 1
+    product2 = 2
+    product3 = 3
+
+    return Category(
+        "Смартфоны",
+        "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+        [product1, product2, product3],
+    )
+
+
+@pytest.fixture()
 def category2():
     product4 = 4
     return Category(
@@ -40,3 +53,8 @@ def category2():
         "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
         [product4],
     )
+
+
+@pytest.fixture()
+def product_category_count():
+    return

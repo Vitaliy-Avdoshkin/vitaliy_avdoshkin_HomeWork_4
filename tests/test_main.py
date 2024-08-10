@@ -1,3 +1,6 @@
+from src.main import Category
+
+
 def test_main(product_samsung, product_iphone, product_xiaomi):
     assert product_samsung.name == "Samsung Galaxy S23 Ultra"
     assert product_samsung.description == "256GB, Серый цвет, 200MP камера"
@@ -22,6 +25,8 @@ def test_main_category(category1, category2):
         == "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни"
     )
     assert category1.products == [1, 2, 3]
+    assert Category.category_count == 2
+    assert Category.product_count == 4
 
     assert category2.name == "Телевизоры"
     assert (
