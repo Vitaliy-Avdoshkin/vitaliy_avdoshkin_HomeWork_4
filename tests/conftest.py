@@ -1,6 +1,7 @@
 import pytest
 
 from src.classes import Category, Product
+from src.product_iterator import ProductIterator
 
 
 @pytest.fixture()
@@ -48,3 +49,8 @@ def products():
 @pytest.fixture
 def new_product():
     return Product('55" QLED 4K', "Фоновая подсветка", 123000.0, 7)
+
+
+@pytest.fixture
+def product_iterator(category1):
+    return ProductIterator(category1)
