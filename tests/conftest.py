@@ -1,6 +1,7 @@
 import pytest
 
-from src.classes import Category, Product
+from src.cls_Category import Category
+from src.cls_Product import Product
 from src.product_iterator import ProductIterator
 
 
