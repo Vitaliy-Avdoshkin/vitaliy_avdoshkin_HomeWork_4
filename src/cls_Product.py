@@ -37,7 +37,7 @@ class Product:
 
 
 class Smartphone(Product):
-    efficiency: str
+    efficiency: float
     model: str
     memory: int
     color: str
@@ -52,7 +52,7 @@ class Smartphone(Product):
 class LawnGrass(Product):
     country: str
     germination_period: str
-    color: int
+    color: str
 
 
     def __init__(self, name, description, price, quantity, country, germination_period, color):

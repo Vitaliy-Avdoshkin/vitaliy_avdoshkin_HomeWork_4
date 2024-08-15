@@ -2,7 +2,7 @@ import pytest
 
 from src.cls_Category import Category
 from src.cls_Product import Product
-from src.product_iterator import ProductIterator
+from src.cls_product_iterator import ProductIterator
 
 
 @pytest.fixture()
