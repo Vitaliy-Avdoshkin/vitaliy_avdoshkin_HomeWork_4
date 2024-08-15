@@ -1,6 +1,6 @@
 from typing import Any
 
-from src.cls_Product import Product
+from src.cls_product import Product
 
 
 class Category:

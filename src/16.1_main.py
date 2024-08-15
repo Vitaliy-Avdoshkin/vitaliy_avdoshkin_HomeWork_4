@@ -1,5 +1,5 @@
-from src.cls_Category import Category
-from src.cls_Product import Product, Smartphone, LawnGrass
+from src.cls_category import Category
+from src.cls_product import Product, Smartphone, LawnGrass
 
 if __name__ == "__main__":
     smartphone1 = Smartphone(
