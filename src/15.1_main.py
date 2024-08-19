@@ -1,5 +1,5 @@
-from src.cls_category import Category
-from src.cls_product import Product
+from src.Category import Category
+from src.Product import Product
 
 if __name__ == "__main__":
     product1 = Product(
