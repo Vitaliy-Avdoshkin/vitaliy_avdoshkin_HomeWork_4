@@ -1,8 +1,8 @@
 import pytest
 
-from src.cls_category import Category
-from src.cls_product import LawnGrass, Product, Smartphone
-from src.cls_product_iterator import ProductIterator
+from src.Category import Category
+from src.Product import LawnGrass, Product, Smartphone
+from src.Product_iterator import ProductIterator
 
 
 @pytest.fixture()
