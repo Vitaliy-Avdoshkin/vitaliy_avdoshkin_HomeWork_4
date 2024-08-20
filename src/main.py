@@ -1,5 +1,5 @@
-from src.Category import Category
-from src.Product import LawnGrass, Product, Smartphone
+from src.category import Category
+from src.product import LawnGrass, Product, Smartphone
 
 # 16.2 МНОЖЕСТВЕННОЕ НАСЛЕДОВАНИЕ
 if __name__ == "__main__":
