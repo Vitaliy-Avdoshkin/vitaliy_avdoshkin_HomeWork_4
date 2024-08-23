@@ -22,7 +22,7 @@ class Category:
         if isinstance(product, Product):
             try:
                 if product.quantity == 0:
-                    raise ZeroQuantity("Товар с нулевым количеством не может быть добавлен")
+                    raise ZeroQuantity("Товар не может быть добавлен")
             except ZeroQuantity as e:
                 print(str(e))
             else:
