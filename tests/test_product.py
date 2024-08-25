@@ -1,5 +1,7 @@
 import pytest
+
 from src.product import Product
+
 
 def test_product_init(
     product_samsung,
@@ -105,15 +107,3 @@ def test_product_add(product_samsung, product_iphone, product_xiaomi):
 def test_product_add_error(smartphone1, grass1, product_xiaomi):
     with pytest.raises(TypeError):
         assert smartphone1 + grass1
-
-
-# def test_custom_exception(capsys, product_invalid):
-#
-#     message = capsys.readouterr()
-#     assert message.out.strip() == "Товар с нулевым количеством не может быть добавлен"
-
-
-def test_custom_exception(capsys):
-    Product("Бракованный товар", "Неверное количество", 1000.0, 0)
-    message = capsys.readouterr()
-    assert message.out.strip() == "Товар с нулевым количеством не может быть добавлен"

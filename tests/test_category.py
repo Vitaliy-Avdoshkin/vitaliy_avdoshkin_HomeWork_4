@@ -1,5 +1,5 @@
 from src.product import Product
-#from src.exceptions import ZeroQuantity
+
 
 def test_category_init(first_category):
     assert first_category.name == "Смартфоны"
@@ -31,18 +31,3 @@ def test_category_str(first_category):
 def test_middle_price(first_category, category_without_products):
     assert first_category.middle_price() == 140333.33
     assert category_without_products.middle_price() == 0
-
-
-
-
-
-# def test_custom_exception(capsys, first_category):
-#     assert len(first_category.product_list) == 3
-#
-#     product_invalid = Product("Бракованный товар", "Неверное количество", 1000.0, 0)
-#     first_category.add_product = product_invalid
-#     message = capsys.readouterr()
-#     #assert message.out.strip() == "Товар не может быть добавлен"
-#     #assert message.out.strip().split('\n')[] == "Товар не может быть добавлен"
-#     print(message)
-
