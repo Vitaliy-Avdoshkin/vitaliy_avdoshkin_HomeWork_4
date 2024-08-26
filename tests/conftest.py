@@ -1,8 +1,8 @@
 import pytest
 
-from src.Category import Category
-from src.Product import LawnGrass, Product, Smartphone
-from src.Product_iterator import ProductIterator
+from src.category import Category
+from src.product import LawnGrass, Product, Smartphone
+from src.product_iterator import ProductIterator
 
 
 @pytest.fixture()
@@ -103,3 +103,17 @@ def grass1():
         "7 дней",
         "Зеленый",
     )
+
+
+@pytest.fixture()
+def category_without_products():
+    return Category(
+        name="Смартфоны",
+        description="Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+        products=[],
+    )
+
+
+@pytest.fixture()
+def product_invalid():
+    return Product("Бракованный товар", "Неверное количество", 1000.0, 0)

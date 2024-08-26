@@ -1,4 +1,4 @@
-from src.Product import Product
+from src.product import Product
 
 
 class Category:
@@ -18,16 +18,16 @@ class Category:
     def __str__(self):
         return f"{self.name}, количество продуктов: {self.products_counter()} шт."
 
-    def add_product(self, product):
+    @property
+    def product_list(self):
+        return self.__products
+
+    def add_product(self, product: Product):
         if isinstance(product, Product):
             self.__products.append(product)
             Category.product_count += 1
         else:
             raise TypeError
-
-    @property
-    def product_list(self):
-        return self.__products
 
     @property
     def products(self):
@@ -41,3 +41,13 @@ class Category:
         for product in self.__products:
             products_counter += product.quantity
         return products_counter
+
+    def middle_price(self):
+        try:
+            return round(
+                sum([product.price for product in self.__products])
+                / len(self.__products),
+                2,
+            )
+        except ZeroDivisionError:
+            return 0
